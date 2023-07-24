@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>DIC cafe</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/sale.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="section_inner">
+    <div class="section_title">
+      <h1>Venta de café en grano</h1>
+    </div>
+  </section>
+
+  <section class="section_inner menu_section">
+    <div class="center">
+      <h1 class="menu_title">gama (de productos)</h1>
+    </div>
+    <ul class="menu_list coffee_menu">
+      <li class="caffee_menu_list_item">
+        <div class="caffee_menu_content">
+          <h2 class="menu_item_title">Mezcla original 200 g</h2>
+          <p class="caffee_menu_price">500 yenes</p>
+        </div>
+        <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+      </li>
+      <li class="caffee_menu_list_item">
+        <div class="caffee_menu_content">
+          <h2 class="menu_item_title">Mezcla original 500 g</h2>
+          <p class="caffee_menu_price">900 yenes</p>
+        </div>
+        <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+      </li>
+      <li class="caffee_menu_list_item">
+        <div class="caffee_menu_content">
+          <h2 class="menu_item_title">Mezcla especial 200 g</h2>
+          <p class="caffee_menu_price">700 yenes</p>
+        </div>
+        <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+      </li>
+      <li class="caffee_menu_list_item">
+        <div class="caffee_menu_content">
+          <h2 class="menu_item_title">Mezcla especial 500 g</h2>
+          <p class="caffee_menu_price">1.200 yenes.</p>
+        </div>
+        <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+      </li>
+    </ul>
+    <h2>Gastos de envío.</h2>
+    <ul>
+      <li>500 yenes por gastos de envío si el importe total es inferior a 2000 yenes.</li>
+      <li>250 yenes por un mínimo de 2.000 yenes.</li>
+      <li>Gratuito a partir de 3.000 yenes.</li>
+    </ul>
+  </section>
+
+  <section class="section_inner">
+    <h2>pedir</h2>
+
+    <form>
+      <p>Seleccione un producto</p>
+      <div>
+        <select id="product" required>
+          <option hidden value="0">Seleccionar</option>
+          <option value="1">Mezcla original 200g ¥ 500</option>
+          <option value="2">Mezcla original 500g ¥ 900</option>
+          <option value="3">Mezcla especial 200g ¥ 700</option>
+          <option value="4">Mezcla especial 500g, 1.200 yenes.</option>
+        </select>
+        <p>Seleccione la cantidad</p>
+        <input type="number" min="1" max="5" id="number" required>
+      </div>
+      <br>
+      <input type="button" class="btn" value="añadir" onclick="add()">
+      <input type="button" class="btn" value="importe total" onclick="calc()">
+    </form>
+
+  </section>
+  <script type="text/javascript" src="javascripts/sale.js"></script>
+</body>
+
+</html>
